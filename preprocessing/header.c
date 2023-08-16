@@ -13,8 +13,10 @@ int isPrime(unsigned int num){
     }
     double sqrtNum = sqrt((double) num);
     int i;
-    for(i = 3; i <= sqrtNum; i+=2)
-        if(num % i == 0)
+    for(i = 3; i <= sqrtNum; i+=2){
+        if(num % i == 0) {
             return 0;
+        }
+    }
     return 1;
 }
