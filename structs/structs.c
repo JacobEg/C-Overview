@@ -38,5 +38,6 @@ int main(){
     newName2(person2, "Ann");
     printf("New name for person1: %s\n", person1.name);
     printf("New name for person2: %s\n", person2->name);
+    free(person2);
     return 0;
 }
