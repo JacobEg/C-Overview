@@ -15,12 +15,14 @@ void storeInteger2(int toStore, int val){
 
 int main(){
     int val = 10;
-    int* valPtr = &val;
+    int* valPtr = &val; // referencing val
     puts("Test Pointers");
+    printf("Size of pointer: %lu\n", sizeof(int*));
     printf("val: %d\n", val);
-    printf("valPtr: %x\n", valPtr);
+    printf("valPtr: %p\n", valPtr);
     storeInteger1(valPtr, 42);
-    printf("new valPtr val: %d\n", *valPtr);
+    printf("new valPtr value: %d\n", *valPtr); // dereferencing valPtr
+    printf("new val value: %d\n", val);
     puts("Store regular integer");
     int val2 = 77;
     printf("val2: %d\n", val2);

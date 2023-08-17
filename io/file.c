@@ -36,7 +36,7 @@ void writeFile(){
     while(gets(line)){
         fprintf(f, "%s\n", line);
     }
-    fputs("All done writing the file!", f);
+    fputs("All done writing the file!\n", f);
     puts("---------");
     fclose(f);
 }

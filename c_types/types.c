@@ -7,11 +7,12 @@
 #include <stdbool.h>
 
 int isIntegral(int integral, double doubleVal){
+    // 4.5 - 4 is the integral
     return doubleVal >= integral && doubleVal < integral + 1;
 }
 
 int main(){
-    puts("C type info");
+    puts("C type info"); // writes to stdout, puts \n at end
     // integer types
     puts("------------------\nchar");
     printf("Size of char: %lu\n", sizeof(char));
@@ -38,6 +39,7 @@ int main(){
     printf("long min: %lld\n", LLONG_MIN);
     printf("long max: %lld\n", LLONG_MAX);
     printf("unsigned long max: %llu\n", ULLONG_MAX);
+    // boolean
     puts("------------------\nbool (just a fancy int)");
     printf("True: %d (or any non-zero value)\n", true);
     printf("False: %d\n", false);
@@ -58,7 +60,7 @@ int main(){
     puts("long double has 19 decimal digits of accuracy");
     puts("------------------\nfloat innacuracy example");
     float num = 4.2222222222;
-    printf("result = %lf", num * 2.0);
+    printf("result = %lf\n", num * 2.0);
     puts("------------------\nchar (characters)");
     char c = 'a';
     printf("c val (character): %c\n", c);

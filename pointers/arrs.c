@@ -17,17 +17,20 @@ void testStr(int argc, char** argv){
         printf("%s\n", argv[i]);
     }
     puts("string operations");
+    // calloc(strlen(argv[1]), sizeof(char))
     char* str = malloc(sizeof(char) * strlen(argv[1]));
+    // char str[strlen(argv[1])]
     if(str == NULL){
         puts("Out of memory");
         exit(-1);
     }
     strcpy(str, argv[1]);
     puts("strlen & strcpy");
-    printf("%s\n", str);
+    printf("%s\n", str); // puts(str)
     if(argc >= 3){
         puts("strcmp");
-        printf("strcmp(argv[1], argv[2]) = %d\n", strcmp(argv[1], argv[2]));
+        printf("strcmp(argv[1], argv[2]) = %d\n",
+        strcmp(argv[1], argv[2]));
     }
     printf("iterating over string \"%s\"\n", argv[1]);
     i = 0;
@@ -47,23 +50,23 @@ void testStr(int argc, char** argv){
 
 void testArrs(){
     puts("Test arrays");
-    int numInnerArrs = 2;
-    int lenInnerArrs = 3;
+    const int NUM_INNER_ARRS = 2;
+    const int LEN_INNER_ARRS = 3;
     // this way stores arr on stack, not heap
     int matrix[2][3] = {{1, 4, 2}, {3, 6, 8}};
-    printf("matrix: %x\n", matrix);
-    // this way allocates the arrays in memory
-    int** arr2d = malloc(numInnerArrs * sizeof(int*));
-    int* arr2d0 = malloc(lenInnerArrs * sizeof(int));
-    int* arr2d1 = malloc(lenInnerArrs * sizeof(int));
+    printf("matrix: %p\n", matrix);
+    // this way allocates the arrays in memory, on heap
+    int** arr2d = malloc(NUM_INNER_ARRS * sizeof(int*));
+    int* arr2d0 = malloc(LEN_INNER_ARRS * sizeof(int));
+    int* arr2d1 = malloc(LEN_INNER_ARRS * sizeof(int));
     *arr2d = arr2d0; // == arr2d[0] = arr2d0
     *(arr2d+1) = arr2d1; // arr2d[1] = arr2d1
-    for(int i = 0; i < lenInnerArrs; i++){
+    for(int i = 0; i < LEN_INNER_ARRS; i++){
         arr2d0[i] = rand() % 10; // == *(arr2d0+i)
         arr2d1[i] = rand() % 10; // == *(arr2d1+i)
     }
-    for(int i = 0; i < numInnerArrs; i++){
-        for(int j = 0; j < lenInnerArrs; j++){
+    for(int i = 0; i < NUM_INNER_ARRS; i++){
+        for(int j = 0; j < LEN_INNER_ARRS; j++){
             printf("arr2d[%d][%d] = %d\n", i, j, arr2d[i][j]);
         }
     }

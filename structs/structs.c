@@ -1,5 +1,5 @@
 /**
- * Demonstrating structs in C
+ * Demonstrating structs and typedef in C
 */
 
 #include <stdio.h>
@@ -13,10 +13,12 @@ typedef struct Person{
 typedef char byte;
 
 void newName1(person p, char* name){
+    free(p.name);
     p.name = name;
 }
 
 void newName2(person* p, char* name){
+    free(p->name);
     p->name = name;
 }
 
@@ -25,6 +27,7 @@ int main(){
     printf("Size of char = %d\n", sizeof(char));
     printf("Size of byte = %d\n", sizeof(byte));
     puts("----------------");
+    // same as: struct Person person1;
     person person1;
     person* person2 = malloc(sizeof(person));
     person1.name = "Bob";

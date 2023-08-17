@@ -1,5 +1,5 @@
 /**
- * A header file giving the func implementation for isPrime
+ * A source file giving the func implementation for isPrime
 */
 
 #include <math.h>

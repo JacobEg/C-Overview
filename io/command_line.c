@@ -40,6 +40,7 @@ int main(int argc, char** argv){
     int mode = atoi(argv[1]);
     if(mode == 1){
         fputs("Getting lines from stdin\n", stdout);
+        // puts("Getting lines from stdin")
         getLines();
     } else if(mode == 2){
         puts("Getting nums from stdin");
