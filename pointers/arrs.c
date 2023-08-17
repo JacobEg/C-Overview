@@ -36,7 +36,7 @@ void testStr(int argc, char** argv){
     i = 0;
     while(argv[1][i] != '\0'){ // null terminator
         printf("'%c' = %d\n", argv[1][i], argv[1][i]);
-        i++;
+        i++; // i += 1 == i = i + 1
     }
     puts("strcat");
     char* concatenated = calloc(strlen(argv[1]) + 5, sizeof(char));

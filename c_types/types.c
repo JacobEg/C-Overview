@@ -36,9 +36,9 @@ int main(){
     printf("unsigned long max: %lu\n", ULONG_MAX);
     puts("------------------\nlong long");
     printf("Size of long long: %lu\n", sizeof(long long));
-    printf("long min: %lld\n", LLONG_MIN);
-    printf("long max: %lld\n", LLONG_MAX);
-    printf("unsigned long max: %llu\n", ULLONG_MAX);
+    printf("long long min: %lld\n", LLONG_MIN);
+    printf("long long max: %lld\n", LLONG_MAX);
+    printf("unsigned long long max: %llu\n", ULLONG_MAX);
     // boolean
     puts("------------------\nbool (just a fancy int)");
     printf("True: %d (or any non-zero value)\n", true);

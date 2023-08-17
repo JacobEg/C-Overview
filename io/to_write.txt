@@ -1,4 +1,4 @@
-i want to write
-to this file
-right now
+blah blah
+lorem ipsum
+test
 All done writing the file!
