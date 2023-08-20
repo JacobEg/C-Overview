@@ -16,5 +16,9 @@ int main(int argc, char **argv){
         unsigned int num = atoi(argv[i]);
         printf("%d is prime: %d\n", num, isPrime(num));
     }
+    /*puts("------------");
+    double a = 2.0;
+    double b = 3.0;
+    printf("%lf^%lf = %lf", a, b, pow(a, b));*/
     return 0;
 }
